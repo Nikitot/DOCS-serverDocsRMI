@@ -21,10 +21,10 @@ public class SimpleServer
 
             Registry localRegistry = LocateRegistry.createRegistry(1099); //создаем реестр для локальной сети
 
-            localRegistry.rebind("//127.0.0.1/SimpleTime", sti);//регистрируем объект в реестре
+            localRegistry.rebind("//127.0.0.1/DocsRMI", sti);//регистрируем объект в реестре
 
             //Bind remote object into the RMI registry
-            Naming.rebind("//127.0.0.1/SimpleTime", sti);
+            Naming.rebind("//127.0.0.1/DocsRMI", sti);
             //Echo a message
             System.out.println("Ready to serve");
         }
